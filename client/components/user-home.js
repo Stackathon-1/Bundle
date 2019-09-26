@@ -10,7 +10,11 @@ export const UserHome = props => {
 
   return (
     <div>
-      <h3>Welcome, {email}</h3>
+      <h1>GROUP </h1>
+      <h1>ASSIGN </h1>
+      <h1>SCHEDULE </h1>
+      <h1>EVERYBODY </h1>
+      <h6>{email}</h6>
     </div>
   )
 }
