@@ -7,14 +7,16 @@ import {connect} from 'react-redux'
  */
 export const UserHome = props => {
   const {email} = props
-
+  console.log('userHome comp')
   return (
-    <div>
-      <h1>GROUP </h1>
-      <h1>ASSIGN </h1>
-      <h1>SCHEDULE </h1>
-      <h1>EVERYBODY </h1>
-      <h6>{email}</h6>
+    <div id="splash">
+      {/* <h1 className="bold-title-splash">GROUP, ASSIGN AND SCHEDULE </h1>
+      <h1 className="bold-title-splash">EVERYONE </h1> */}
+
+      <h1 className="bold-title">GROUP </h1>
+      <h1 className="bold-title">ASSIGN </h1>
+      <h1 className="bold-title">SCHEDULE </h1>
+      <h1 className="bold-title">EVERYBODY </h1>
     </div>
   )
 }
