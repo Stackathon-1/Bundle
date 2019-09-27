@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Cabin|Roboto&display=swap');
 body {
   font-family: sans-serif;
   background: url('clotaire-lehoux--wtTTiovkWY-unsplash.jpg');
@@ -68,23 +68,77 @@ nav {
   font-family: 'Anton';
   margin-top: 300px;
 }
+.splash-1 {
+  margin-left: 300px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  margin-top: 300px;
+}
 form div {
   margin: 1em;
   display: inline-block;
 }
-h1.bold-title-splash {
-  font-size: 6em;
-  margin: -35px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+div.bold-title-splash {
+  margin-left: 300px;
+  padding: 0px 10px;
+  font-family: Roboto;
+  margin-top: 300px;
+  font-size: 11em;
+  -webkit-animation: focus-in-expand-fwd 0.8s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+    transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+    transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+div.bold-title-splash-sub {
+  margin-left: 310px;
+  padding: 0px 10px;
+  font-family: Cabin;
+  font-size: 1.2em;
+  letter-spacing: 5px;
 }
 h1.bold-title:hover {
-  color: rgb(252, 61, 61);
+  color: rgb(204, 145, 34);
   padding-left: 50px;
 }
 h1.bold-title {
   font-size: 6em;
+  letter-spacing: 2px;
   margin: -35px;
   transition: all 0.4s ease;
+  cursor: pointer;
 
   /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); */
   -webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1)

@@ -10,13 +10,13 @@ export const UserHome = props => {
   console.log('userHome comp')
   return (
     <div id="splash">
-      {/* <h1 className="bold-title-splash">GROUP, ASSIGN AND SCHEDULE </h1>
-      <h1 className="bold-title-splash">EVERYONE </h1> */}
+      <h1 className="bold-title-splash">BUNDLE</h1>
+      <h1 className="bold-title-splash">EVERYONE </h1>
 
-      <h1 className="bold-title">GROUP </h1>
+      {/* <h1 className="bold-title">GROUP </h1>
       <h1 className="bold-title">ASSIGN </h1>
       <h1 className="bold-title">SCHEDULE </h1>
-      <h1 className="bold-title">EVERYBODY </h1>
+      <h1 className="bold-title">EVERYBODY </h1> */}
     </div>
   )
 }

@@ -30,3 +30,15 @@ export default class BurgerButt extends Component {
     )
   }
 }
+
+{
+  /* <div>
+<div className="rot-link">BUNDLEAPP</div>
+<Link
+  to={!this.state.clicked ? '/start' : '/'}
+  onClick={this.toggle.bind(this)}
+>
+  <BurgerButt />
+</Link>
+</div> */
+}
