@@ -22,10 +22,14 @@ label {
   /* transform: rotate(-90deg); */
 }
 .rot-link {
+  display: block;
   transform: rotate(-90deg);
-  margin-bottom: 200px;
-  margin-top: 480%;
+  top: 50%;
   color: #f5f5dca3;
+  letter-spacing: 7px;
+  position: absolute;
+  padding-bottom: 60%;
+  margin-top: -155%;
 }
 
 nav a {

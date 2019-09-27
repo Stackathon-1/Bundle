@@ -39,7 +39,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             HOME
           </Link> */}
 
-          <div className="rot-link">JohnieeJuiceboxx</div>
+          <div className="rot-link">BUNDLEAPP</div>
           <Link to="/start">
             <BurgerButt />
           </Link>
