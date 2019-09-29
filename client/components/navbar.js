@@ -20,7 +20,7 @@ class Navbar extends Component {
     let {handleClick, isLoggedIn} = this.props
     return (
       <div>
-        <nav>
+        <nav className="modern-nav">
           {isLoggedIn ? (
             <div id="main-nav">
               {/* The navbar will show these links after you log in */}
@@ -50,7 +50,7 @@ class Navbar extends Component {
           HOME
         </Link> */}
 
-              <div className="rot-link">BUNDLEAPP</div>
+              <div className="rot-link">QREW</div>
 
               <Link
                 to={!this.state.clicked ? '/start' : '/'}

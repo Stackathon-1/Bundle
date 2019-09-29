@@ -1,7 +1,6 @@
-const User = require('./user')
-const Channel = require('./channel')
 const Message = require('./message')
-
+const Channel = require('./channel')
+const User = require('./user')
 /**
  * If we had any associations to make, this would be a great place to put them!
  * ex. if we had another model called BlogPost, we might say:

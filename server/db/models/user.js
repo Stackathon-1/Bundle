@@ -12,6 +12,15 @@ const images = [
 const getRandomImage = () => images[Math.floor(Math.random() * images.length)]
 
 const User = db.define('user', {
+  name: {
+    type: Sequelize.STRING
+  },
+  image: {
+    type: Sequelize.STRING,
+    defaultValue: function() {
+      return getRandomImage()
+    }
+  },
   email: {
     type: Sequelize.STRING
     // unique: true,
@@ -35,12 +44,6 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
-  },
-  image: {
-    type: Sequelize.STRING,
-    defaultValue: function() {
-      return getRandomImage()
-    }
   }
 })
 

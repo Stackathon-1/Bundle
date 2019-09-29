@@ -7,7 +7,7 @@ export default class Splash extends Component {
         <div className="splash-1">
           <div className="bold-title-splash">QREW</div>
           <div className="bold-title-splash-sub">
-            Event scheduler and task assigner{' '}
+            Event scheduler and task manager
           </div>
         </div>
       </div>
