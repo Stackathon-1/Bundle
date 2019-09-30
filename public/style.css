@@ -9,7 +9,12 @@ body {
 
   color: #f1efe0;
 }
-
+.btn {
+  background: slategray;
+}
+.form-control {
+  width: 250px;
+}
 a {
   text-decoration: none;
   color: #f1efe0;
@@ -28,6 +33,7 @@ label {
 #main-component {
   margin-left: 350px;
 }
+
 .rot-link {
   display: block;
   transform: rotate(-90deg);
@@ -113,6 +119,7 @@ main .media img {
   margin-left: 300px; /* Same as the width of the sidebar */
   padding: 0px 10px;
   margin-top: 300px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 form div {
   margin: 1em;
@@ -130,7 +137,7 @@ div.bold-title-splash {
 }
 
 .calendar-div {
-  max-width: 300px;
+  max-width: 800px;
   -webkit-animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
@@ -223,6 +230,17 @@ h1.bold-title {
 .calendar-title {
   font-family: 'Cabin';
   letter-spacing: 7px;
+}
+#calendar-form {
+  background: rgb(38, 38, 40, 1);
+  box-shadow: inset 0 1px 0 rgba(99, 97, 97, 0.5), 0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 4px 1px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 10px;
+}
+.calendar-flex-this {
+  display: flex;
 }
 @-webkit-keyframes slide-in-right {
   0% {
@@ -1215,4 +1233,98 @@ h1.bold-title {
 .hamburger--vortex-r.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 500px) {
+  /* Styles */
+  .splash-1 {
+    margin-left: 0px;
+    padding: 0px;
+    margin-top: 200px;
+  }
+  div.bold-title-splash {
+    margin-left: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    margin-top: 200px;
+    font-size: 8em;
+    -webkit-animation: focus-in-expand-fwd 0.8s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    text-align: center;
+  }
+  div.bold-title-splash-sub {
+    margin-left: 0px;
+    font-family: Cabin;
+    font-size: 0.8em;
+    text-align: center;
+
+    letter-spacing: 3px;
+  }
+  nav.modern-nav {
+    border-bottom: 1px solid #a2a2a2;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: #404040; */
+    overflow-x: hidden;
+    padding-top: 9px;
+    /* border-right: 1px solid #a2a2a2; */
+  }
+  #nav-burger {
+    position: fixed;
+    /* bottom: 0px; */
+    /* left: 0px; */
+    right: 0px;
+    top: 2px;
+  }
+  body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 71% 225px;
+    background-color: black;
+  }
+  h1.bold-title {
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin: -27px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); */
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+  h1.bold-title {
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin: -27px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); */
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation: slide-in-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  a h1 {
+    color: #f1efe0;
+  }
+  #splash {
+    margin-left: 20%;
+    padding: 0px 10px;
+    font-family: 'Anton';
+    margin-top: 33%;
+  }
+  .sidebar-chat {
+    display: none;
+  }
+  #main-component {
+    margin-left: 5%;
+  }
+  .calendar-flex-this {
+    display: contents;
+  }
 }
