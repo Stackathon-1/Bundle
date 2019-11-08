@@ -33,7 +33,7 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/start" component={DarkLogin} />
-        <Route path="/channel" component={Main} />
+        <Route path="/channels" component={Main} />
         <Route path="/calendar" component={CalendarView} />
 
         {isLoggedIn && (
