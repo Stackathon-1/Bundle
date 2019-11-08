@@ -127,6 +127,7 @@ const main = () => {
       db.close()
       return null
     })
+  console.log(`seeded successfully`)
 }
 
 main()
