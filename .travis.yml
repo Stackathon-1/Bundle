@@ -15,14 +15,16 @@ install:
 before_script:
   - psql -c 'create database "qrew-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 script:
-  - npm test             # test the code
+  - npm test # test the code
   - npm run build-client # make the bundle
-
-# before_deploy:
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE # see README
+before_deploy: # omit node_modules, since we set skip_cleanup below
+  - rm -rf node_modules
+deploy: # see README for details on these keys
+  # prevents travis from deleting the build
+  skip_cleanup: true
+  provider: heroku
+  # app should be your heroku app name; see README
+  app: qrew
+  # the secure key indicates an encrypted value; see README
+  api_key:
+    secure: h0mBYYQ8IJ0F67C2MjivsBCc4DriWWWLgte1r/1b1V4FjUYOj4fLP9gYounaJaoueIZVhqr6J+YP0N8DRj/4oxROPGTZs88sISrswFT7wpbGfTzAQrgxN3BfyxzzMv6U8ACFEcqAXqkxY6HDjWYdiVzyuosQygnlXcbsrIGM+yALMrq3Cpi+KYPWeTxH7I3xckCzX5F0gwZfPugfVy94ehfMiiJOB/Ra2EMRKaLFXKE6Pi7AQw+bShG5FlAaIDH9SqB58lzhzmUD5HLgLvsypDqvsl52xFxQzLij9H7Nn1E4ZdEwOBbjv3slfz35TvUl4lsVqTO0WwhWvM4SIMI3LHSH8wN76440s7JRjk5OREMHYuX/mSe+VEVUbuz3XAbypB8yaCX9w8nmxS9xk+XscFc5Y7osIUrIahF7YgUI3ZmpYGh2QyrtmYjBA2+EY4aPcH5sRYqvSIhS/7N0SvSMadAiZd9VKJqFrUt7rVfdoqjN0kZcXLNbnt4av1Wr3DsXoHVLSzQU3YMQ9Nft8B76+RtPPL7h0E/ynjPXy3jGmiVtGOHlvXmElkCp0EFUX3jaWip3JlbvDHNUcIEH4erhGPy7alb/OAtN3WxEg1lWBnyrOB3MFHtVuaeFEefmS1zeActERTU1ksudjddTkPuts79ppEj1aRH1Ftl+MmdCh3Y=
