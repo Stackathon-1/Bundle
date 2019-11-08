@@ -53,7 +53,7 @@ class Navbar extends Component {
               <div className="rot-link">QREW</div>
 
               <Link
-                to={!this.state.clicked ? '/start' : '/'}
+                to={!this.state.clicked ? '/start' : '/home'}
                 onClick={this.toggle.bind(this)}
               >
                 <BurgerButt />
